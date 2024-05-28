@@ -1,5 +1,7 @@
 
-/* Font Settings*/
+
+/* FONTS */
+
 @font-face {
     font-family: 'Luminari';
     font-style: normal;
@@ -7,8 +9,33 @@
     src: local('Luminari'), url('fonts/Luminari-Regular.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Playfair';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Playfair'), url('fonts/PlayfairDisplay.ttf') format('ttf');
+}
 
-/* General body styling */
+@font-face {
+    font-family: 'Jacquard 12 , system-ui';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jacquard 12'), url('fonts/Jacquard12-Regular.ttf') format('ttf');
+}
+
+/* FONTS */
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN INTRO SECTION STYLING */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -24,11 +51,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* MAIN INTRO SECTION STYLING */
 
 
 
 
-/*Button Styling Bottom of Page*/
+
+
+
+
+
+
+
+
+/* BOTTOM PAGE BUTTONS SECTION STYLING */
 
 .button-container {
     margin-top: -100px;
@@ -41,8 +77,8 @@ body {
     bottom: 0;
     left: 0;
     transition: transform 0.5s, opacity 0.5s;
-    transform: translateY(100%); /* Start off-screen */
-    opacity: 0; /* Start as invisible */
+    transform: translateY(100%); 
+    opacity: 0; 
 }
 
 .page-button {
@@ -68,10 +104,23 @@ body {
     opacity: 1;
 }
 
+/* BOTTOM PAGE BUTTONS SECTION STYLING */
 
 
-/*Spacers*/
+
+
+
+
+
+
+
+
+
+/* SPACERS */
 
 .spacer {
     height: 85px; 
 }
+
+/* SPACERS */
+
