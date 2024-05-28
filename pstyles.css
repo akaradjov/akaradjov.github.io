@@ -2,21 +2,21 @@
     font-family: 'Luminari';
     font-style: normal;
     font-weight: normal;
-    src: local('Luminari'), url('assets/fonts/Luminari-Regular.woff') format('woff');
+    src: local('Luminari'), url('fonts/Luminari-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Playfair';
     font-style: normal;
     font-weight: normal;
-    src: local('Playfair'), url('assets/fonts/PlayfairDisplay.ttf') format('ttf');
+    src: local('Playfair'), url('fonts/PlayfairDisplay.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Jacquard 12 , system-ui';
     font-style: normal;
     font-weight: normal;
-    src: local('Jacquard 12'), url('assets/fonts/Jacquard12-Regular.ttf') format('ttf');
+    src: local('Jacquard 12'), url('fonts/Jacquard12-Regular.ttf') format('ttf');
 }
 
 
