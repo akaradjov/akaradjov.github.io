@@ -1,3 +1,6 @@
+
+/* FONTS */
+
 @font-face {
     font-family: 'Luminari';
     font-style: normal;
@@ -19,8 +22,18 @@
     src: local('Jacquard 12'), url('fonts/Jacquard12-Regular.ttf') format('ttf');
 }
 
+/* FONTS */
 
-/* General body styling */
+
+
+
+
+
+
+
+
+
+/* MAIN 'HI FEATURED PROJECTS SECTION */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -37,56 +50,36 @@ body {
     align-items: center;
 }
 
-/* Styling for different project sections */
-.content-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    opacity: 0; 
-    transition: opacity 0.5s ease-out; /* transition opacity */
-}
 
-.content-section2 {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    opacity: 0; /* initially hidden */
-    transition: opacity 0.5s ease-out; /* Smooth transition for opacity */
-}
-
-.content-section3 {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    opacity: 0; /* initially hidden */
-    transition: opacity 0.5s ease-out; /* Smooth transition for opacity */
-}
-
-
-
+/* AOS ENSURING */
 [data-aos].aos-animate .content-section {
-    opacity: 1; /* Fully visible when AOS triggers the animation */
+    opacity: 1; 
 }
+/* AOS ENSURING */
 
 
+/* MAIN 'HI FEATURED PROJECTS SECTION */
+
+
+
+
+
+
+
+
+
+
+/* HEADER SPECS */
 h2 {
     margin: 0 0 20px 0;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 
 h2-2 {
     margin: 0 0 20px 0;
     font-size: 15px;
+    font-weight: 500;
 }
 
 
@@ -101,46 +94,20 @@ h4 {
     font-weight: lighter;
 
 }
-
-.bio-text {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 72%; 
-    margin-top: 20px; /* space between heading and paragraph */
-    font-size: 24px;
-}
-.bio-image {
-    width: 28%; 
-    margin-right: 20px; /* space for image and text */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.bio-text2 {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 72%; /* Adjust width as needed */
-    margin-top: 20px; /* Spacing between heading and paragraph */
-    font-size: 24px;
-}
-
-.bio-text3 {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 72%; /* Adjust width as needed */
-    margin-top: 20px; /* Spacing between heading and paragraph */
-    font-size: 24px;
-}
+/* HEADER SPECS */
 
 
 
 
-/*Spacers*/
+
+
+
+
+
+
+
+
+/* SPACERS */
 
 .spacer1 {
     height: 125px; 
@@ -163,9 +130,20 @@ h4 {
 .testspacer {
     margin-top: -20px
 }
+/* SPACERS */
 
 
-/*Page buttons bottom of page*/
+
+
+
+
+
+
+
+
+
+
+/* DIFFERENT PAGE BUTTONS - BOTTOM OF PAGE */
 
 .button-container {
     margin-top: -100px;
@@ -178,8 +156,8 @@ h4 {
     bottom: 0;
     left: 0;
     transition: transform 0.5s, opacity 0.5s;
-    transform: translateY(100%); /* Start off-screen */
-    opacity: 0; /* Start as invisible */
+    transform: translateY(100%); 
+    opacity: 0; 
 }
 
 .page-button {
@@ -204,9 +182,18 @@ h4 {
     transform: translateY(0);
     opacity: 1;
 }
+/* DIFFERENT PAGE BUTTONS - BOTTOM OF PAGE */
 
 
-/*GitHub link button section and text*/
+
+
+
+
+
+
+
+
+/* GITHUB LINK BUTTON AND TEXT SECTION */
 
 .content-wrapper1 {
     display: flex;
@@ -216,13 +203,13 @@ h4 {
 }
 
 .content-wrapper {
-    margin-top: -140px; /* This might be causing unexpected alignment issues */
+    margin-top: -140px; 
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    flex-direction: column; /* hopefully ensures vertical alignment of all content */
+    flex-direction: column; 
 }
 
 .content-wrapper {
@@ -242,7 +229,7 @@ h4 {
 }
 
 .content-section4 a img {
-    max-width: 120px; /* Adjust size as needed */
+    max-width: 120px; 
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -252,16 +239,26 @@ h4 {
     cursor: pointer;
 }
 
+/* GITHUB LINK BUTTON AND TEXT SECTION */
 
 
+
+
+
+
+
+
+
+
+/* PROJECT CONTAINERS SECTION */
 
 .bio-container6 {
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(202, 202, 202, 0.1);
-    width: 95%; /* Adjust width as needed */
-    margin-top: 20px; /* Spacing between heading and paragraph */
+    width: 95%; 
+    margin-top: 20px; 
     font-size: 15px;
     display: flex;
     flex-direction: column;
@@ -276,12 +273,12 @@ h4 {
 }
 
 .bio-image6 {
-    width: 28%; /* Adjust width as needed */
-    margin-right: 20px; /* Spacing between image and text */
+    width: 28%; 
+    margin-right: 20px; 
 }
 
 .bio-text6 {
-    width: 72%; /* Adjust width as needed */
+    width: 72%; 
 }
 
 .content-section6 {
@@ -291,6 +288,6 @@ h4 {
     justify-content: center;
     align-items: center;
     padding: 50px;
-    opacity: 0; /* initially hidden */
-    transition: opacity 0.5s ease-out; /* Smooth transition for opacity */
+   
 }
+/* PROJECT CONTAINERS SECTION */

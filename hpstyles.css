@@ -173,8 +173,8 @@ h2 {
     bottom: 0;
     left: 0;
     transition: transform 0.5s, opacity 0.5s;
-    transform: translateY(100%); /* begin off-screen */
-    opacity: 0; /* begin as invisible */
+    transform: translateY(100%); 
+    opacity: 0; 
 }
 
 .page-button {
