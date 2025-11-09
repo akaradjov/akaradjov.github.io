@@ -3,7 +3,7 @@
     font-family: 'AlexIntroFont'; /* Using a custom name for the intro text */
     font-style: normal;
     font-weight: normal;
-    src: local('Another Tag'), url('assets/fonts/aAnotherTag.ttf') format('truetype');
+    src: local('Another Tag'), url('fonts/aAnotherTag.ttf') format('truetype');
 }
 
 /* 2. Standard Fallback Font for all other elements */
@@ -11,21 +11,21 @@
     font-family: 'Luminari'; /* Keeping original definition, but it won't be used */
     font-style: normal;
     font-weight: normal;
-    src: local('Luminari'), url('assets/fonts/Luminari-Regular.woff') format('woff');
+    src: local('Luminari'), url('fonts/Luminari-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Playfair'; /* Keeping original definition, but it won't be used */
     font-style: normal;
     font-weight: normal;
-    src: local('Playfair'), url('assets/fonts/PlayfairDisplay.ttf') format('truetype');
+    src: local('Playfair'), url('fonts/PlayfairDisplay.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Jacquard 12 , system-ui'; /* Keeping original definition, but it won't be used */
     font-style: normal;
     font-weight: normal;
-    src: local('Jacquard 12'), url('assets/fonts/Jacquard12-Regular.ttf') format('truetype');
+    src: local('Jacquard 12'), url('fonts/Jacquard12-Regular.ttf') format('truetype');
 }
 
 
@@ -33,7 +33,7 @@
     font-family: 'Yoster, system-ui'; /* Keeping original definition, but it won't be used */
     font-style: normal;
     font-weight: normal;
-    src: local('Yoster'), url('assets/fonts/yoster.ttf') format('truetype');
+    src: local('Yoster'), url('fonts/yoster.ttf') format('truetype');
 }
 
 
@@ -41,7 +41,7 @@
     font-family: 'pcsenior, system-ui'; /* Keeping original definition, but it won't be used */
     font-style: normal;
     font-weight: normal;
-    src: local('pcsenior'), url('assets/fonts/pcsenior.ttf') format('ttf');
+    src: local('pcsenior'), url('fonts/pcsenior.ttf') format('ttf');
 }
 /* ^^^ FONTS ^^^ */
 
@@ -324,3 +324,4 @@ h2 {
 }
 
 /* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
+
