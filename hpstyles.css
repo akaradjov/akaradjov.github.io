@@ -1,112 +1,107 @@
 /* FONTS */
 @font-face {
-    font-family: 'AlexIntroFont'; /* Using a custom name for the intro text */
+    font-family: 'AlexIntroFont';
     font-style: normal;
     font-weight: normal;
     src: local('Another Tag'), url('fonts/aAnotherTag.ttf') format('truetype');
 }
 
-/* 2. Standard Fallback Font for all other elements */
-@font-face {
-    font-family: 'Luminari'; /* Keeping original definition, but it won't be used */
-    font-style: normal;
-    font-weight: normal;
-    src: local('Luminari'), url('fonts/Luminari-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Playfair'; /* Keeping original definition, but it won't be used */
-    font-style: normal;
-    font-weight: normal;
-    src: local('Playfair'), url('fonts/PlayfairDisplay.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Jacquard 12 , system-ui'; /* Keeping original definition, but it won't be used */
-    font-style: normal;
-    font-weight: normal;
-    src: local('Jacquard 12'), url('fonts/Jacquard12-Regular.ttf') format('truetype');
-}
-
-
-@font-face {
-    font-family: 'Yoster, system-ui'; /* Keeping original definition, but it won't be used */
-    font-style: normal;
-    font-weight: normal;
-    src: local('Yoster'), url('fonts/yoster.ttf') format('truetype');
-}
-
-
-@font-face {
-    font-family: 'pcsenior, system-ui'; /* Keeping original definition, but it won't be used */
-    font-style: normal;
-    font-weight: normal;
-    src: local('pcsenior'), url('fonts/pcsenior.ttf') format('ttf');
-}
-/* ^^^ FONTS ^^^ */
-
-
 /* GEN BODY SECTION */
 body {
     margin: 0;
-    font-family: 'Times New Roman', Times, serif; 
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333;
-    background-color: white; 
+    background-color: white;
 }
+
+/* TOP FIXED NAVIGATION BAR */
+.top-nav {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 100;
+    display: flex;
+    gap: 75px;
+}
+
+.top-button {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 1px solid #333;
+    background-color: transparent;
+}
+
 .centered-text {
     text-align: center;
-    font-size: 48px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.intro-title {
+    font-family:'AlexIntroFont';
+    font-weight: normal;
+    font-size: 82px; 
+}
 /* ^^^ GEN BODY SECTION ^^^ */
 
 
-/* MAIN AUTOBIOGRAPHY SECTION */
-.content-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    padding: 50px;
-    opacity: 0; 
-    transition: opacity 0.5s ease-out; 
-}
-
-.aos-animate .content-section {
-    opacity: 1; 
-}
-
-h2 {
-    margin: 0 0 20px 0;
-    font-size: 45px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.bio-text {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(156, 155, 155, 0.1);
-    width: 75%; 
-    margin-top: 20px; 
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif; 
-}
-
+/* MAIN BIOGRAPHY SECTION */
 .content-section-wrapper {
+    padding-top: 333px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.aos-animate .content-section {
+    opacity: 1;
+}
+
+h2 {
+    margin: 0 0 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-header {
+    font-size: 78px; 
+    font-weight: lighter;
+    margin-bottom: -77px;
+}
+
+.sub-header {
+    font-size: 58px; 
+    font-weight: 100;
+}
+
+.bio-text {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(156, 155, 155, 0.1);
+    width: 75%;
+    margin-top: 120px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .header-with-images {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     width: 100%;
 }
@@ -121,16 +116,14 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 20px; 
-    
-    right: 20px;
+    margin-left: 20px;
 }
 
 .image-container img,
 .image-container .image-button img {
-    width: 33px; 
+    width: 33px;
     height: auto;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .image-button {
@@ -147,25 +140,13 @@ h2 {
 .image-button:hover img {
     opacity: 0.8;
 }
-/* ^^^ MAIN AUTOBIOGRAPHY SECTION ^^^ */
+/* ^^^ MAIN BIOGRAPHY SECTION ^^^ */
 
 
-/* BOTTOM OF PAGE BUTTONS SECTION */
-.button-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    transition: transform 0.5s, opacity 0.5s;
-    transform: translateY(100%); /* begin off-screen */
-    opacity: 0; /* begin as invisible */
-}
+/* BOTTOM OF PAGE BUTTONS SECTION (REMOVED - Kept page-button style for top nav) */
 
 .page-button {
+    /* Shared styles for buttons */
     padding: 10px 20px;
     font-size: 16px;
     color: #070707;
@@ -175,8 +156,8 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s;
     text-decoration: none;
-    font-family: 'Times New Roman', Times, serif; 
-    font-weight: normal; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
 }
 
 .page-button:hover {
@@ -184,19 +165,18 @@ h2 {
 }
 
 
-[data-aos].aos-animate .button-container {
-    transform: translateY(0);
-    opacity: 1;
-}
-/* ^^^ BOTTOM OF PAGE BUTTONS SECTION ^^^ */
+/* REMOVED: .button-container specific styles and [data-aos].aos-animate .button-container */
 
 
 /* IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION */
 .content-wrapper {
+    padding-top: 333px;
+    /* Reduced padding-bottom as there's no fixed footer to clear */
+    padding-bottom: 150px; 
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    width: 100%; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .content-section2 {
@@ -207,8 +187,14 @@ h2 {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 40px;
-    opacity: 0; 
-    transition: opacity 0.5s ease-out; 
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.split-section-header {
+    font-weight: 100;
+    font-size: 66px;
+    margin-top: 0;
 }
 
 .bio-text2 {
@@ -216,60 +202,32 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(173, 173, 173, 0.1);
-    width: 90%; 
-    margin-top: 20px; 
-    font-size: 24px;
-    font-family: 'Times New Roman', Times, serif; 
+    width: 90%;
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .image-section {
     flex: 1;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: flex-start;
     padding: 40px;
 }
 
 .image-section img {
-    max-width: 90%; 
+    max-width: 90%;
     height: auto;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 /* ^^^ IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION ^^^ */
 
 
-/* SPACERS */
-
-.spacer {
-    height: 88px; 
-}
-
-.spacer1 {
-    height: 80px; 
-}
-
-
-.spacer2 {
-    height: 333px; 
-}
-
-.spacerr {
-    height: 333px; 
-}
-
-.spacer6 {
-
-
-    height: 120px;
-}
-
-/* ^^^ SPACERS ^^^ */
-
-
 /* MY AUTOBIOGRAPHY AND FROG VIDEO SECTION */
 
-.container { /* for all the content */
+.container { 
     width: 100%;
     height: 100%;
 }
@@ -304,14 +262,13 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2em;
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* This section uses Times as it is not the main intro */
-    font-family: 'Times New Roman', Times, serif !important; 
+    font-family: 'Times New Roman', Times, serif !important;
     font-size: 82px !important;
+    text-align: center;
 }
 
 .fixed-video {
@@ -324,4 +281,3 @@ h2 {
 }
 
 /* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
-
