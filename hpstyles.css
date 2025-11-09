@@ -1,83 +1,58 @@
 /* FONTS */
-
 @font-face {
-    font-family: 'Luminari';
+    font-family: 'AlexIntroFont'; /* Using a custom name for the intro text */
     font-style: normal;
     font-weight: normal;
-    src: local('Luminari'), url('fonts/Luminari-Regular.woff') format('woff');
+    src: local('Another Tag'), url('assets/fonts/aAnotherTag.ttf') format('truetype');
+}
+
+/* 2. Standard Fallback Font for all other elements */
+@font-face {
+    font-family: 'Luminari'; /* Keeping original definition, but it won't be used */
+    font-style: normal;
+    font-weight: normal;
+    src: local('Luminari'), url('assets/fonts/Luminari-Regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Playfair';
+    font-family: 'Playfair'; /* Keeping original definition, but it won't be used */
     font-style: normal;
     font-weight: normal;
-    src: local('Playfair'), url('fonts/PlayfairDisplay.ttf') format('ttf');
+    src: local('Playfair'), url('assets/fonts/PlayfairDisplay.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Jacquard 12 , system-ui';
+    font-family: 'Jacquard 12 , system-ui'; /* Keeping original definition, but it won't be used */
     font-style: normal;
     font-weight: normal;
-    src: local('Jacquard 12'), url('fonts/Jacquard12-Regular.ttf') format('ttf');
+    src: local('Jacquard 12'), url('assets/fonts/Jacquard12-Regular.ttf') format('truetype');
 }
 
+
+@font-face {
+    font-family: 'Yoster, system-ui'; /* Keeping original definition, but it won't be used */
+    font-style: normal;
+    font-weight: normal;
+    src: local('Yoster'), url('assets/fonts/yoster.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'pcsenior, system-ui'; /* Keeping original definition, but it won't be used */
+    font-style: normal;
+    font-weight: normal;
+    src: local('pcsenior'), url('assets/fonts/pcsenior.ttf') format('ttf');
+}
 /* ^^^ FONTS ^^^ */
-
-
-
-
-
-/* Background Wrapper */
-.background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10; /* Ensures it's behind all content */
-    overflow: hidden;
-}
-
-/* First Background Image */
-.bg1, .bg2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 1s ease-in-out;
-}
-
-/* First background image */
-.bg1 {
-    background-image: url('images/sunset.png'); /* Replace with actual path */
-    opacity: 1;
-}
-
-/* Second background image */
-.bg2 {
-    background-image: url('images/stars.png'); /* Replace with actual path */
-    opacity: 0;
-}
-
-/* Add some padding to allow scrolling */
-.spacer-section {
-    height: 150vh; /* Adjust based on content */
-}
-
-
-
-
 
 
 /* GEN BODY SECTION */
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif; 
     line-height: 1.6;
     color: #333;
+    background-color: white; 
 }
 .centered-text {
     text-align: center;
@@ -88,16 +63,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 /* ^^^ GEN BODY SECTION ^^^ */
-
-
-
-
-
-
-
-
 
 
 /* MAIN AUTOBIOGRAPHY SECTION */
@@ -112,37 +78,31 @@ body {
     transition: opacity 0.5s ease-out; 
 }
 
-
-
-[data-aos].aos-animate .content-section {
+.aos-animate .content-section {
     opacity: 1; 
 }
 
 h2 {
     margin: 0 0 20px 0;
     font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .bio-text {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(156, 155, 155, 0.1);
     width: 75%; 
     margin-top: 20px; 
     font-size: 20px;
-    
+    font-family: 'Times New Roman', Times, serif; 
 }
-
-
-
-
-
 
 .content-section-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
 }
-
 
 .header-with-images {
     display: flex;
@@ -160,9 +120,9 @@ h2 {
 .image-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-left: 20px; 
-    position:absolute;
+    
     right: 20px;
 }
 
@@ -172,7 +132,6 @@ h2 {
     height: auto;
     margin-bottom: 10px; 
 }
-
 
 .image-button {
     background: none;
@@ -188,23 +147,10 @@ h2 {
 .image-button:hover img {
     opacity: 0.8;
 }
-
-
-
-
 /* ^^^ MAIN AUTOBIOGRAPHY SECTION ^^^ */
 
 
-
-
-
-
-
-
-
-
 /* BOTTOM OF PAGE BUTTONS SECTION */
-
 .button-container {
     width: 100%;
     display: flex;
@@ -215,8 +161,8 @@ h2 {
     bottom: 0;
     left: 0;
     transition: transform 0.5s, opacity 0.5s;
-    transform: translateY(100%); 
-    opacity: 0; 
+    transform: translateY(100%); /* begin off-screen */
+    opacity: 0; /* begin as invisible */
 }
 
 .page-button {
@@ -229,6 +175,8 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s;
     text-decoration: none;
+    font-family: 'Times New Roman', Times, serif; 
+    font-weight: normal; 
 }
 
 .page-button:hover {
@@ -236,31 +184,19 @@ h2 {
 }
 
 
-
 [data-aos].aos-animate .button-container {
     transform: translateY(0);
     opacity: 1;
 }
-
-
 /* ^^^ BOTTOM OF PAGE BUTTONS SECTION ^^^ */
 
 
-
-
-
-
-
-
-
-
 /* IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION */
-
 .content-wrapper {
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    width: 94%; 
+    width: 100%; 
 }
 
 .content-section2 {
@@ -268,21 +204,22 @@ h2 {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
     opacity: 0; 
     transition: opacity 0.5s ease-out; 
 }
 
 .bio-text2 {
-    background-color:  #f8f8f8;
-    padding: 10px;
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(173, 173, 173, 0.1);
-    width: 110%; 
+    width: 90%; 
     margin-top: 20px; 
     font-size: 24px;
+    font-family: 'Times New Roman', Times, serif; 
 }
 
 .image-section {
@@ -294,20 +231,12 @@ h2 {
 }
 
 .image-section img {
-    max-width: 70%; 
+    max-width: 90%; 
     height: auto;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 8px; 
 }
-
 /* ^^^ IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION ^^^ */
-
-
-
-
-
-
-
 
 
 /* SPACERS */
@@ -322,7 +251,7 @@ h2 {
 
 
 .spacer2 {
-    height: 101px; 
+    height: 333px; 
 }
 
 .spacerr {
@@ -336,12 +265,6 @@ h2 {
 }
 
 /* ^^^ SPACERS ^^^ */
-
-
-
-
-
-
 
 
 /* MY AUTOBIOGRAPHY AND FROG VIDEO SECTION */
@@ -386,6 +309,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* This section uses Times as it is not the main intro */
+    font-family: 'Times New Roman', Times, serif !important; 
+    font-size: 82px !important;
 }
 
 .fixed-video {
@@ -397,8 +323,4 @@ h2 {
     z-index: -1;
 }
 
-
 /* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
-
-
-
