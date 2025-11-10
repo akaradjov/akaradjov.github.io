@@ -34,7 +34,7 @@ body {
 
 .centered-text {
     text-align: center;
-    height: 100vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +44,7 @@ body {
 .intro-title {
     font-family:'AlexIntroFont';
     font-weight: normal;
-    font-size: 82px; 
+    font-size: 111px; 
 }
 /* ^^^ GEN BODY SECTION ^^^ */
 
@@ -80,7 +80,7 @@ h2 {
 .main-header {
     font-size: 78px; 
     font-weight: lighter;
-    margin-bottom: 77px;
+    margin-bottom: 100px;
 }
 
 .sub-header {
@@ -281,5 +281,6 @@ h2 {
 }
 
 /* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
+
 
 
