@@ -80,7 +80,7 @@ h2 {
 .main-header {
     font-size: 78px; 
     font-weight: lighter;
-    margin-bottom: -77px;
+    margin-bottom: 77px;
 }
 
 .sub-header {
@@ -267,7 +267,7 @@ h2 {
     justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif !important;
-    font-size: 82px !important;
+    font-size: 66px !important;
     text-align: center;
 }
 
@@ -281,4 +281,5 @@ h2 {
 }
 
 /* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
+
 
