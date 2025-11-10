@@ -51,8 +51,7 @@ body {
 
 /* MAIN BIOGRAPHY SECTION */
 .content-section-wrapper {
-    /* Reverting padding-top to original value since video section is 100vh again */
-    padding-top: 333px; 
+    padding-top: 333px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -144,9 +143,35 @@ h2 {
 /* ^^^ MAIN BIOGRAPHY SECTION ^^^ */
 
 
+/* BOTTOM OF PAGE BUTTONS SECTION (REMOVED - Kept page-button style for top nav) */
+
+.page-button {
+    /* Shared styles for buttons */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #070707;
+    background-color: #fdfdfd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+.page-button:hover {
+    background-color: #fbfbfc;
+}
+
+
+/* REMOVED: .button-container specific styles and [data-aos].aos-animate .button-container */
+
+
 /* IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION */
 .content-wrapper {
     padding-top: 333px;
+    /* Reduced padding-bottom as there's no fixed footer to clear */
     padding-bottom: 150px; 
     display: flex;
     align-items: center;
@@ -218,8 +243,7 @@ h2 {
 
 .video-section {
     position: relative;
-    /* Reverting height back to 100vh */
-    height: 100vh; 
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -229,22 +253,15 @@ h2 {
     left: 50%;
     width: 100%;
     height: 100%;
-    
-    /* REMOVED: object-fit: cover; to allow scaling without cropping */
-    
-    /* The original transform centers it */
-    transform: translate(-50%, -50%); 
-    
-    /* NEW: Scale the video down to 50% (half size) */
-    transform: translate(-50%, -50%) scale(0.5); 
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
 
 .overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* The text should remain centered over the scaled video */
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -264,3 +281,4 @@ h2 {
 }
 
 /* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
+
