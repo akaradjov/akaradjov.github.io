@@ -51,8 +51,8 @@ body {
 
 /* MAIN BIOGRAPHY SECTION */
 .content-section-wrapper {
-    /* Adjusted padding-top as video section is now 50vh */
-    padding-top: 150px; /* Reduced to bring content closer to the video */
+    /* Reverting padding-top to original value since video section is 100vh again */
+    padding-top: 333px; 
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -218,8 +218,8 @@ h2 {
 
 .video-section {
     position: relative;
-    /* Changed from 100vh to 50vh */
-    height: 50vh; 
+    /* Reverting height back to 100vh */
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -229,15 +229,22 @@ h2 {
     left: 50%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
+    
+    /* REMOVED: object-fit: cover; to allow scaling without cropping */
+    
+    /* The original transform centers it */
+    transform: translate(-50%, -50%); 
+    
+    /* NEW: Scale the video down to 50% (half size) */
+    transform: translate(-50%, -50%) scale(0.5); 
 }
 
 .overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* The text should remain centered over the scaled video */
+    transform: translate(-50%, -50%); 
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
