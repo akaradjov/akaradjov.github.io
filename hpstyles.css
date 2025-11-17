@@ -15,23 +15,6 @@ body {
     background-color: white;
 }
 
-/* TOP FIXED NAVIGATION BAR */
-.top-nav {
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    z-index: 100;
-    display: flex;
-    gap: 75px;
-}
-
-.top-button {
-    padding: 10px 15px;
-    font-size: 18px;
-    border: 1px solid #333;
-    background-color: transparent;
-}
-
 .centered-text {
     text-align: center;
     height: 100vh;
@@ -144,10 +127,24 @@ h2 {
 /* ^^^ MAIN BIOGRAPHY SECTION ^^^ */
 
 
-/* BOTTOM OF PAGE BUTTONS SECTION (REMOVED - Kept page-button style for top nav) */
+/* PAGE BUTTONS */
+.top-nav {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 100;
+    display: flex;
+    gap: 75px;
+}
+
+.top-button {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 1px solid #333;
+    background-color: transparent;
+}
 
 .page-button {
-    /* Shared styles for buttons */
     padding: 10px 20px;
     font-size: 16px;
     color: #070707;
@@ -164,9 +161,7 @@ h2 {
 .page-button:hover {
     background-color: #fbfbfc;
 }
-
-
-/* REMOVED: .button-container specific styles and [data-aos].aos-animate .button-container */
+/* ^^^ PAGE BUTTONS ^^^ */
 
 
 /* IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION */
@@ -283,6 +278,7 @@ h2 {
 }
 
 /* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
+
 
 
 
