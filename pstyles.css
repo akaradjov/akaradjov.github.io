@@ -96,56 +96,6 @@ body {
 
 
 
-/* HEADER SPECS */
-h2 {
-    margin: 0 0 20px 0;
-    font-size: 15px;
-}
-
-h2-2 {
-    margin: 0 0 20px 0;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-h3 {
-    margin: 0 0 20px 0;
-    font-size: 15px;
-}
-
-h4 {
-    margin-bottom: -200px;
-    text-align: center;
-    font-weight: lighter;
-
-}
-/* ^^^ HEADER SPECS ^^^ */
-
-
-
-
-/* SPACERS */
-.spacer1 {
-    height: 125px; 
-}
-
-.spacer2 {
-    height: 85px; 
-}
-
-
-.spacer3 {
-    height: 85px; 
-}
-
-.spacer4 {
-    height: 0px; 
-}
-/* ^^^ SPACERS ^^^ */
-
-
-
-
 /* PAGE BUTTONS */
 .top-nav {
     position: fixed;
@@ -273,3 +223,4 @@ h4 {
    
 }
 /* PROJECT CONTAINERS SECTION */
+
