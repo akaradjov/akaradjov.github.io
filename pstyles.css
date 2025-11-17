@@ -1,28 +1,3 @@
-/* FONTS */
-@font-face {
-    font-family: 'Luminari';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Luminari'), url('fonts/Luminari-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Playfair';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Playfair'), url('fonts/PlayfairDisplay.ttf') format('ttf');
-}
-
-@font-face {
-    font-family: 'Jacquard 12 , system-ui';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Jacquard 12'), url('fonts/Jacquard12-Regular.ttf') format('ttf');
-}
-
-/* FONTS */
-
-
 
 /* GEN BODY SECTION */
 body {
@@ -260,5 +235,6 @@ h4 {
    
 }
 /* PROJECT CONTAINERS SECTION */
+
 
 
