@@ -58,141 +58,156 @@ body {
     font-weight: normal;
 }
 
-/* ============================================================= */
-/*  VIDEO SECTION (REVERTED – ORIGINAL OVERLAP)                 */
-/* ============================================================= */
+/* MY AUTOBIOGRAPHY AND FROG VIDEO SECTION */
+
+.container { 
+    width: 100%;
+    height: 100%
+}
+
+.intro, .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
 .video-section {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    margin-top: -30vh; /* ← original overlap */
+    margin-top: -30vh;
 }
+
 .background-video {
     position: absolute;
-    top: 50%; left: 50%;
-    width: 100%; height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
 }
+
 .overlay-text {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 45px;
-    color: #000;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 45px !important;
     text-align: center;
 }
 
-/* ============================================================= */
-/*  MAIN BIO + SIDE IMAGE (25%/75%) – -30px margin-top          */
-/* ============================================================= */
-.content-section-wrapper {
-    padding: 80px 80px 0;
-    margin-top: -30px; /* ← your requested fix */
+.fixed-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-.bio-with-image {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    gap: 40px;
-}
-.bio-side-image {
-    flex: 0 0 25%;
-    display: flex;
-    justify-content: center;
-}
-.bio-side-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.bio-main-content { flex: 0 0 75%; }
 
-.main-header   { font-size: 78px; font-weight: 300; margin-bottom: .5rem; }
-.sub-header    { font-size: 58px; font-weight: 100; }
+/* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
+
+/* MAIN BIOGRAPHY SECTION */
+.content-section-wrapper {
+    padding-top: 333px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.aos-animate .content-section {
+    opacity: 1;
+}
+
+h2 {
+    margin: 0 0 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-header {
+    font-size: 78px; 
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.sub-header {
+    font-size: 58px; 
+    font-weight: 100;
+}
 
 .bio-text {
-    background: #fff;
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(156,155,155,.15);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(156, 155, 155, 0.1);
+    width: 75%;
+    margin-top: 120px;
     font-size: 20px;
-    margin-top: 40px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* Header + icons */
 .header-with-images {
     display: flex;
     align-items: flex-start;
+    position: relative;
     width: 100%;
-    gap: 20px;
 }
-.headers { flex: 1; }
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .image-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: flex-start;
+    margin-left: 20px;
 }
+
 .image-container img,
-.image-button img { width: 36px; height: auto; }
+.image-container .image-button img {
+    width: 33px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 .image-button {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
 }
-.image-button:hover img { opacity: .8; }
 
-/* ============================================================= */
-/*  SPLIT SECTIONS (50/50) – CONSISTENT MARGINS, SCALING        */
-/* ============================================================= */
-.content-wrapper {
-    padding: 200px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 60px;
+.image-button img {
+    display: block;
 }
 
-/* No reverse class needed – both splits now image-left, text-right */
-.image-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.image-button:hover img {
+    opacity: 0.8;
 }
-.image-section.scaled img {
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.1);
-    transform: scale(0.85);
-    transition: transform .4s ease;
-}
-.image-section.scaled img:hover { transform: scale(0.90); }
-
-.content-section2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.content-section2.scaled-text { font-size: 1.15em; }
-.split-section-header {
-    font-size: 66px;
-    font-weight: 100;
-    margin: 0 0 20px 0;
-}
-.bio-text2 {
-    background: #fff;
-    padding: 32px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(173,173,173,.15);
-    font-size: 22px;
-    line-height: 1.7;
-}
+/* ^^^ MAIN BIOGRAPHY SECTION ^^^ */
 
 /* ============================================================= */
 /*  BUTTON RE-USABLE                                            */
@@ -209,3 +224,4 @@ body {
     transition: background .3s;
 }
 .page-button:hover { background: #fbfbfc; }
+
