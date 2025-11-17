@@ -1,4 +1,6 @@
-/* FONTS */
+/* ============================================================= */
+/*  FONTS                                                       */
+/* ============================================================= */
 @font-face {
     font-family: 'AlexIntroFont';
     font-style: normal;
@@ -6,285 +8,216 @@
     src: local('Another Tag'), url('fonts/aAnotherTag.ttf') format('truetype');
 }
 
-/* GEN BODY SECTION */
+/* ============================================================= */
+/*  GLOBAL RESET & TYPOGRAPHY                                   */
+/* ============================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333;
-    background-color: white;
+    background-color: #fff;
 }
 
-/* TOP FIXED NAVIGATION BAR */
+/* ============================================================= */
+/*  TOP NAVIGATION                                              */
+/* ============================================================= */
 .top-nav {
     position: fixed;
     top: 50px;
     right: 50px;
-    z-index: 100;
+    z-index: 1000;
     display: flex;
     gap: 75px;
 }
-
 .top-button {
     padding: 10px 15px;
     font-size: 18px;
     border: 1px solid #333;
-    background-color: transparent;
+    background: transparent;
+    color: #333;
+    text-decoration: none;
+    transition: background .3s, color .3s;
 }
+.top-button:hover { background: #f0f0f0; }
 
-.centered-text {
-    text-align: center;
+/* ============================================================= */
+/*  INTRO TITLE                                                 */
+/* ============================================================= */
+.intro-title {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.intro-title {
-    font-family:'AlexIntroFont';
+    text-align: center;
+    font-family: 'AlexIntroFont', serif;
+    font-size: 111px;
     font-weight: normal;
-    font-size: 111px; 
-}
-/* ^^^ GEN BODY SECTION ^^^ */
-
-
-/* MAIN BIOGRAPHY SECTION */
-.content-section-wrapper {
-    padding-top: 333px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.content-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 50px;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
+/* ============================================================= */
+/*  VIDEO SECTION (50% less gap below)                          */
+/* ============================================================= */
+.video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -15vh; /* ← Reduced from -30vh */
 }
-
-.aos-animate .content-section {
-    opacity: 1;
+.background-video {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
-
-h2 {
-    margin: 0 0 20px 0;
+.overlay-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    color: #000;
+    text-align: center;
 }
 
-.main-header {
-    font-size: 78px; 
-    font-weight: lighter;
-    margin-bottom: 20px;
-}
+/* ============================================================= */
+/*  MAIN BIO + SIDE IMAGE (25% / 75%)                           */
+/* ============================================================= */
+.content-section-wrapper { padding-top: 200px; } /* Reduced from 333px */
 
-.sub-header {
-    font-size: 58px; 
-    font-weight: 100;
+.bio-with-image {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    gap: 40px;
+    padding: 0 50px;
 }
+.bio-side-image {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: center;
+}
+.bio-side-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.bio-main-content { flex: 0 0 75%; }
+
+.main-header   { font-size: 78px; font-weight: 300; margin-bottom: .5rem; }
+.sub-header    { font-size: 58px; font-weight: 100; }
 
 .bio-text {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(156, 155, 155, 0.1);
-    width: 75%;
-    margin-top: 120px;
+    background: #fff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(156,155,155,.15);
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
 }
 
+/* Header + icons */
 .header-with-images {
     display: flex;
     align-items: flex-start;
-    position: relative;
     width: 100%;
+    gap: 20px;
 }
-
-.headers {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
+.headers { flex: 1; }
 .image-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
+    gap: 12px;
 }
-
 .image-container img,
-.image-container .image-button img {
-    width: 33px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
+.image-button img { width: 36px; height: auto; }
 .image-button {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
 }
+.image-button:hover img { opacity: .8; }
 
-.image-button img {
-    display: block;
-}
-
-.image-button:hover img {
-    opacity: 0.8;
-}
-/* ^^^ MAIN BIOGRAPHY SECTION ^^^ */
-
-
-/* BOTTOM OF PAGE BUTTONS SECTION (REMOVED - Kept page-button style for top nav) */
-
-.page-button {
-    /* Shared styles for buttons */
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #070707;
-    background-color: #fdfdfd;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: normal;
-}
-
-.page-button:hover {
-    background-color: #fbfbfc;
-}
-
-
-/* REMOVED: .button-container specific styles and [data-aos].aos-animate .button-container */
-
-
-/* IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION */
+/* ============================================================= */
+/*  SPLIT SECTIONS (50/50) – Image scaled 15% smaller, text larger */
+/* ============================================================= */
 .content-wrapper {
-    padding-top: 333px;
-    /* Reduced padding-bottom as there's no fixed footer to clear */
-    padding-bottom: 150px; 
+    padding: 200px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    gap: 60px;
 }
 
-.content-section2 {
-    flex: 1;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 40px;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
+/* Reverse order: text first, then image */
+.content-wrapper.reverse {
+    flex-direction: row-reverse;
 }
 
-.split-section-header {
-    font-weight: 100;
-    font-size: 66px;
-    margin-top: 0;
-}
-
-.bio-text2 {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(173, 173, 173, 0.1);
-    width: 90%;
-    margin-top: 20px;
-    font-size: 22px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
+/* Image: 50% width, scaled down 15% */
 .image-section {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 40px;
 }
-
-.image-section img {
-    max-width: 90%;
-    height: auto;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
+.image-section.scaled img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+    transform: scale(0.85); /* ← 15% smaller */
+    transition: transform .4s ease;
 }
-/* ^^^ IMAGE AND TEXT CONTAINER SPLIT SCREEN SECTION ^^^ */
-
-
-/* MY AUTOBIOGRAPHY AND FROG VIDEO SECTION */
-
-.container { 
-    width: 100%;
-    height: 100%
+.image-section.scaled img:hover {
+    transform: scale(0.90);
 }
 
-.intro, .content {
-    height: 100vh;
+/* Text: 50% width, 15% larger font & padding */
+.content-section2 {
+    flex: 1;
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: flex-start;
+}
+.content-section2.scaled-text {
+    font-size: 1.15em; /* ← 15% larger text */
+}
+.split-section-header {
+    font-size: 66px;
+    font-weight: 100;
+    margin: 0 0 20px 0;
+}
+.bio-text2 {
+    background: #fff;
+    padding: 32px; /* ← increased */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(173,173,173,.15);
+    font-size: 22px;
+    line-height: 1.7;
 }
 
-.video-section {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: -30vh;
+/* ============================================================= */
+/*  BUTTON RE-USABLE                                            */
+/* ============================================================= */
+.page-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #070707;
+    background: #fdfdfd;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background .3s;
 }
-
-.background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-}
-
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Times New Roman', Times, serif !important;
-    font-size: 45px !important;
-    text-align: center;
-}
-
-.fixed-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-/* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
-
-
-
-
-
+.page-button:hover { background: #fbfbfc; }
 
