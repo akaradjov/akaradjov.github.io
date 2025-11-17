@@ -3,43 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- Google Fonts (optional) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-          rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="hpstyles.css">
 
-    <!-- Defer JS -->
-    <script defer src="hpscript.js"></script>
-    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="hpscript.js"></script>
 </head>
-<body>
 
-    <!-- ==== TOP NAV ==== -->
-    <nav class="top-nav">
+<body>
+    <div class="top-nav">
         <a href="projects.html" class="page-button top-button">Projects</a>
         <a href="#bio-start" class="page-button top-button">About</a>
         <a href="bored.html" class="page-button top-button">Bored?</a>
-    </nav>
+    </div>
 
-    <!-- ==== INTRO TITLE ==== -->
-    <section class="intro-title centered-text">
-        <div class="intro">Alex Karadjov</div>
-    </section>
+    <div class="intro-title centered-text">
+        <section class="intro">
+            <div>Alex Karadjov</div>
+        </section>
+    </div>
 
-    <!-- ==== FROG VIDEO (REVERTED TO ORIGINAL) ==== -->
     <section class="video-section" data-aos="fade-in" data-aos-anchor=".intro-title">
         <video class="background-video" muted autoplay loop playsinline>
             <source src="videos/hpfrogman.mov" type="video/mp4">
@@ -48,8 +33,7 @@
         <div class="overlay-text">My Autobiography</div>
     </section>
 
-    <!-- ==== MAIN BIO + SIDE IMAGE (25%/75%) + -30px margin-top ==== -->
-   <div class="content-section-wrapper">
+    <div class="content-section-wrapper">
         <div class="content-section" data-aos="fade-up">
             
             <div class="header-with-images">
@@ -83,50 +67,33 @@
             </p>
         </div>
     </div>
-
-    <!-- ==== FIRST SPLIT: Image LEFT, Text RIGHT ==== -->
-    <section class="content-wrapper">
-        <div class="image-section scaled">
+    
+    <div class="content-wrapper">
+        <div class="image-section" >
             <img src="images/0.png" alt="snoseman">
         </div>
-
-        <div class="content-section2 scaled-text">
+        
+        <div class="content-section2" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <h2 class="split-section-header">Where you will find me</h2>
             <p class="bio-text2">
-                Born August 13th, 2004 making me still a young padawan. Although, inspite of being young I stil find importance in resilience, hard work, and diligence.<br><br>
-                In my free time you will most likely find me anywhere outside. Living in Vancouver, a sunny day is never wasted inside. I love to hike, camp, and explore new places.<br><br>
-                Although, this is all whenever I can make the time to step away from my computer...<br><br>
+                Born August 13th, 2004 making me still a young padawan. Although, inspite of being young I stil find importance in resilience, hard work, and diligence.
+                <br><br>
+                In my free time you will most likely find me anywhere outside. Living in Vancouver, a sunny day is never wasted inside. I love to hike, camp, and explore new places. 
+                <br><br>
+                Although, this is all whenever I can make the time to step away from my computer...
+                <br><br>
                 Right now, I am currently focusing my interests on animation and more UI based aspects for my own self development.
             </p>
         </div>
-    </section>
-
-    <!-- ==== SECOND SPLIT: Image LEFT, Text RIGHT (SWAPPED) ==== -->
-    <section class="content-wrapper">
-         <div class="content-section2 scaled-text">
-            <h2 class="split-section-header">My Creative Side</h2>
-            <p class="bio-text2">
-                I blend code with creativity. From designing animated UIs to building interactive games with PyGame, I treat every project like a canvas.<br><br>
-                My favorite tools for visual design include Figma, Adobe XD, and CSS animations. I believe great software should feel as good as it functions.
-            </p>
-        </div>
         
-        <div class="image-section scaled">
-            <img src="images/creative.jpg" alt="Creative work example">
-        </div>
-    </section>
+    </div>
 
-    <!-- ==== AOS INIT ==== -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            duration: 800,
-            easing: 'ease-out-cubic'
-        });
+        AOS.init();
     </script>
 </body>
 </html>
-
 
 
 
