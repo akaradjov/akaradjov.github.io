@@ -59,12 +59,13 @@ body {
 }
 
 /* ============================================================= */
-/*  VIDEO SECTION                                               */
+/*  VIDEO SECTION (REVERTED – ORIGINAL OVERLAP)                 */
 /* ============================================================= */
 .video-section {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    margin-top: -30vh; /* ← original overlap */
 }
 .background-video {
     position: absolute;
@@ -84,10 +85,11 @@ body {
 }
 
 /* ============================================================= */
-/*  MAIN BIO + SIDE IMAGE (25%/75%) – SAME OUTER MARGIN         */
+/*  MAIN BIO + SIDE IMAGE (25%/75%) – -30px margin-top          */
 /* ============================================================= */
 .content-section-wrapper {
-    padding: 80px 80px 0;   /* top + left/right (same) */
+    padding: 80px 80px 0;
+    margin-top: -30px; /* ← your requested fix */
 }
 .bio-with-image {
     display: flex;
@@ -144,18 +146,18 @@ body {
 .image-button:hover img { opacity: .8; }
 
 /* ============================================================= */
-/*  SPLIT SECTIONS (50/50) – SAME OUTER MARGIN, SCALING        */
+/*  SPLIT SECTIONS (50/50) – CONSISTENT MARGINS, SCALING        */
 /* ============================================================= */
 .content-wrapper {
-    padding: 200px 80px;          /* top/bottom + left/right (same) */
+    padding: 200px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     gap: 60px;
 }
-.content-wrapper.reverse { flex-direction: row-reverse; }
 
+/* No reverse class needed – both splits now image-left, text-right */
 .image-section {
     flex: 1;
     display: flex;
