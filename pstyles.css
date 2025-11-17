@@ -27,11 +27,11 @@
 
 
 
-/* MY AUTOBIOGRAPHY AND FROG VIDEO SECTION */
+/* FROG VIDEO INTRO */
 
 .container { 
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 .intro, .content {
@@ -83,7 +83,7 @@
     z-index: -1;
 }
 
-/* ^^^ MY AUTOBIOGRAPHY AND FROG VIDEO SECTION ^^^ */
+/* ^^^ FROG VIDEO INTRO ^^^ */
 
 
 
@@ -347,3 +347,4 @@ h4 {
 }
 
 /* PROJECT CONTAINERS SECTION */
+
