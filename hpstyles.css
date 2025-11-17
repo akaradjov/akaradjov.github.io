@@ -59,13 +59,12 @@ body {
 }
 
 /* ============================================================= */
-/*  VIDEO SECTION (50% less gap below)                          */
+/*  VIDEO SECTION                                               */
 /* ============================================================= */
 .video-section {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    margin-top: -15vh; /* ← Reduced from -30vh */
 }
 .background-video {
     position: absolute;
@@ -85,16 +84,16 @@ body {
 }
 
 /* ============================================================= */
-/*  MAIN BIO + SIDE IMAGE (25% / 75%)                           */
+/*  MAIN BIO + SIDE IMAGE (25%/75%) – SAME OUTER MARGIN         */
 /* ============================================================= */
-.content-section-wrapper { padding-top: 200px; } /* Reduced from 333px */
-
+.content-section-wrapper {
+    padding: 80px 80px 0;   /* top + left/right (same) */
+}
 .bio-with-image {
     display: flex;
     min-height: 100vh;
     align-items: center;
     gap: 40px;
-    padding: 0 50px;
 }
 .bio-side-image {
     flex: 0 0 25%;
@@ -145,52 +144,40 @@ body {
 .image-button:hover img { opacity: .8; }
 
 /* ============================================================= */
-/*  SPLIT SECTIONS (50/50) – Image scaled 15% smaller, text larger */
+/*  SPLIT SECTIONS (50/50) – SAME OUTER MARGIN, SCALING        */
 /* ============================================================= */
 .content-wrapper {
-    padding: 200px 0;
+    padding: 200px 80px;          /* top/bottom + left/right (same) */
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     gap: 60px;
 }
+.content-wrapper.reverse { flex-direction: row-reverse; }
 
-/* Reverse order: text first, then image */
-.content-wrapper.reverse {
-    flex-direction: row-reverse;
-}
-
-/* Image: 50% width, scaled down 15% */
 .image-section {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
 }
 .image-section.scaled img {
     max-width: 100%;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,.1);
-    transform: scale(0.85); /* ← 15% smaller */
+    transform: scale(0.85);
     transition: transform .4s ease;
 }
-.image-section.scaled img:hover {
-    transform: scale(0.90);
-}
+.image-section.scaled img:hover { transform: scale(0.90); }
 
-/* Text: 50% width, 15% larger font & padding */
 .content-section2 {
     flex: 1;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.content-section2.scaled-text {
-    font-size: 1.15em; /* ← 15% larger text */
-}
+.content-section2.scaled-text { font-size: 1.15em; }
 .split-section-header {
     font-size: 66px;
     font-weight: 100;
@@ -198,7 +185,7 @@ body {
 }
 .bio-text2 {
     background: #fff;
-    padding: 32px; /* ← increased */
+    padding: 32px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(173,173,173,.15);
     font-size: 22px;
@@ -220,4 +207,3 @@ body {
     transition: background .3s;
 }
 .page-button:hover { background: #fbfbfc; }
-
