@@ -31,24 +31,24 @@
 
     
     
-  <!-- FROG INTRO -->
-    <div class="content-section-wrapper">
-        <section class="video-section" data-aos="fade-in">
-            <video class="background-video" muted autoplay loop playsinline>
-                <source src="videos/hpfrogman.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="overlay-text" style="font-family:'Jacquard 12', system-ui; font-size:82px; line-height:1.2; text-align:center;">
-                Hi,<br>These are my Featured Projects.
-            </div>
-        </section>
-
-  <!-- ==== FROG INTRO ==== -->
+ <!-- FROG INTRO - PERFECTLY CENTERED -->
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh; margin: 0; padding: 0;">
+    <section class="video-section" data-aos="fade-in" style="position: relative; width: 100%; height: 100%; max-width: 100vw; overflow: hidden;">
+      <video class="background-video" muted autoplay loop playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%);">
+        <source src="videos/hpfrogman.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay-text" style="font-family:'Jacquard 12', system-ui; font-size:82px; line-height:1.2; text-align:center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; padding: 20px; box-sizing: border-box;">
+        Hi,<br>These are my Featured Projects.
+      </div>
+    </section>
+  </div>
+  <!-- END FROG INTRO -->
 
 
 
 <!-- PROJECT CATEGORY SUBTITLE -->
-    <div class="spacer1"></div>
+    <div style="height: 125px;"></div>
     <h4 data-aos="fade-left" data-aos-delay="100" style="font-family:'Jacquard 12';font-weight:normal;font-size:58px">Macine Learning Applications</h4>
 <!-- PROJECT CATEGORY SUBTITLE -->
 
