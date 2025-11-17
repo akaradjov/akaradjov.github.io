@@ -124,24 +124,11 @@ h4 {
 
 
 
-/* SPACERS */
-.spacer1 {
-    height: 125px; 
-}
-
-.spacer2 {
-    height: 85px; 
-}
-
-
-.spacer3 {
-    height: 85px; 
-}
-
-.spacer4 {
+/* AOS ANCHOR */
+.spacer {
     height: 0px; 
 }
-/* ^^^ SPACERS ^^^ */
+/* ^^^ AOS ANCHOR ^^^ */
 
 
 
@@ -273,4 +260,5 @@ h4 {
    
 }
 /* PROJECT CONTAINERS SECTION */
+
 
